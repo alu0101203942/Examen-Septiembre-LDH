@@ -1,0 +1,3 @@
+Github: https://github.com/alu0101203942/Examen-Septiembre-LDH.git
+Circleci: https://app.circleci.com/pipelines/github/alu0101203942/Examen-Septiembre-LDH
+SonarCloud: https://sonarcloud.io/project/issues?resolved=false&types=BUG&id=alu0101203942_Examen-Septiembre-LDH
