@@ -13,13 +13,15 @@ import java.util.Random;
  */
 class PasswordGen {
 
+    private Random rand = SecureRandom.getInstanceStrong();
     public static void main(String args[]) {
         String password = generatePassword(8, 16);
         System.out.print("Password: " + password);
     }
 
     static String generatePassword(int min_length, int max_length) {
-        Random random = new Random();
+        //Random random = new Random();
+        int random = this.rand.nextInt();
 
         String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String lower = "abcdefghijklmnopqrstuvwxyz";

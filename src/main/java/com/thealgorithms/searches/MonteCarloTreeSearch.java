@@ -14,6 +14,7 @@ import java.util.Random;
  */
 public class MonteCarloTreeSearch {
 
+    private Random rand = SecureRandom.getInstanceStrong();
     public class Node {
 
         Node parent;
@@ -140,7 +141,8 @@ public class MonteCarloTreeSearch {
      * @param promisingNode Node that will be simulated.
      */
     public void simulateRandomPlay(Node promisingNode) {
-        Random rand = new Random();
+        //Random rand = new Random();
+        int random = this.rand.nextInt();
         Node tempNode = promisingNode;
         boolean isPlayerWinner;
 
