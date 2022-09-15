@@ -11,6 +11,8 @@ import java.util.Random;
  */
 public class PowerSum {
 
+    private Random rand = SecureRandom.getInstanceStrong();
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number and the power");
@@ -31,10 +33,11 @@ public class PowerSum {
     }
 	
     int aleatorySelectionRCL(int maxTRCL) {
-       Random r = new Random();
+       //Random r = new Random();
+       int rValue = this.rand.nextInt();
        int low = 0;
        int high = maxTRCL;
-       int posSelected = r.nextInt(high-low) + low;
+       int posSelected = rvalue.nextInt(high-low) + low;
        return posSelected;
     }
     //here i is the natural number which will be raised by X and added in sum.

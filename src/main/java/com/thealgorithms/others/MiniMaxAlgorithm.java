@@ -14,6 +14,7 @@ import java.util.Random;
  */
 public class MiniMaxAlgorithm {
 
+    private Random rand = SecureRandom.getInstanceStrong();
     /**
      * Game tree represented as an int array containing scores. Each array
      * element is a leaf node.
@@ -95,10 +96,11 @@ public class MiniMaxAlgorithm {
      */
     public static int[] getRandomScores(int size, int maxScore) {
         int[] randomScores = new int[(int) Math.pow(2, size)];
-        Random rand = new Random();
+        //Random rand = new Random();
+        int rValue = this.rand.nextInt();
 
         for (int i = 0; i < randomScores.length; i++) {
-            randomScores[i] = rand.nextInt(maxScore) + 1;
+            randomScores[i] = rvalue.nextInt(maxScore) + 1;
         }
 
         return randomScores;
